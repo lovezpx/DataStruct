@@ -23,12 +23,15 @@ void ErgodicSqList(SqList *L);
 int SqListLength(SqList *L);
 Status InsertSqList(SqList *L, int i, ElemType e);
 Status DeleteSqList(SqList *L, int i);
+Status GetNode(SqList *L, int i);
+Status LocateSqList(SqList *L, ElemType e);
+Status DestroySqList(SqList *L);
 
 int main() {
 	SqList L;
 	InitSqList(&L);
 	ErgodicSqList(&L);
-	printf("顺序表的长度为：%d。\n",SqListLength(&L));
+	printf("顺序表的长度为：%d。\n", SqListLength(&L));
 
 	for (int i = 1; i <= 10; i++) {
 		InsertSqList(&L, i, rand() % 100 + 1);
@@ -40,9 +43,18 @@ int main() {
 	ErgodicSqList(&L);
 	printf("顺序表的长度为：%d。\n", SqListLength(&L));
 
+	GetNode(&L, 4);
+
+	LocateSqList(&L, 4);
+
+	DestroySqList(&L);
+	ErgodicSqList(&L);
+	printf("顺序表的长度为：%d。\n", SqListLength(&L));
+
 	return OK;
 }
 
+// 初始化顺序表
 void InitSqList(SqList *L) {
 	L->elem = (ElemType *)malloc(LIST_INIT_SIZE * sizeof(ElemType));
 	if (!L->elem)
@@ -111,6 +123,43 @@ Status DeleteSqList(SqList *L, int i) {
 		*p = *(p + 1);
 
 	-- L->length;
+
+	return OK;
+}
+
+// 获取制定位置元素
+Status GetNode(SqList *L, int i) {
+	if (i < 1 || i > L->length)
+		exit(OVERFLOW);
+
+	printf("顺序表第 %d 位上的元素是：%d。\n", i, L->elem[i - 1]);
+	printf("\n");
+}
+
+// 查找顺序表中是否存在某元素，如存在则打印位置
+Status LocateSqList(SqList *L, ElemType e) {
+	for (int i = 0; i < L->length; i++) {
+		if (L->elem[i] == e) {
+			printf("在线性表中查找到元素，元素位置：%d。\n", i + 1);
+			return OK;
+		}
+	}
+
+	printf("在线性表中未查找到【%d】元素！\n", e);
+
+	return OK;
+}
+
+// 销毁顺序表
+Status DestroySqList(SqList *L) {
+	if (L->elem) {
+		free(L->elem);
+
+		L->elem = NULL;
+		L->length = L->listsize = NULL;
+
+		printf("线性表销毁成功！\n");
+	}
 
 	return OK;
 }
