@@ -1,58 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<malloc.h>
-
-#define LIST_INIT_SIZE 10
-#define LISTINCREMENT 5
-
-#define OK 1
-#define ERROR 0
-#define OVERFLOW 0
-
-typedef int ElemType;
-typedef int Status;
-
-typedef struct SqList {
-	ElemType *elem;
-	int length;
-	int listsize;
-} SqList;
-
-void InitSqList(SqList *L);
-void ErgodicSqList(SqList *L);
-int SqListLength(SqList *L);
-Status InsertSqList(SqList *L, int i, ElemType e);
-Status DeleteSqList(SqList *L, int i);
-Status GetNode(SqList *L, int i);
-Status LocateSqList(SqList *L, ElemType e);
-Status DestroySqList(SqList *L);
-
-int main() {
-	SqList L;
-	InitSqList(&L);
-	ErgodicSqList(&L);
-	printf("顺序表的长度为：%d。\n", SqListLength(&L));
-
-	for (int i = 1; i <= 10; i++) {
-		InsertSqList(&L, i, rand() % 100 + 1);
-	}
-	ErgodicSqList(&L);
-	printf("顺序表的长度为：%d。\n", SqListLength(&L));
-
-	DeleteSqList(&L, 4);
-	ErgodicSqList(&L);
-	printf("顺序表的长度为：%d。\n", SqListLength(&L));
-
-	GetNode(&L, 4);
-
-	LocateSqList(&L, 4);
-
-	DestroySqList(&L);
-	ErgodicSqList(&L);
-	printf("顺序表的长度为：%d。\n", SqListLength(&L));
-
-	return OK;
-}
+#include"SqList.h"
 
 // 初始化顺序表
 void InitSqList(SqList *L) {
@@ -134,6 +80,8 @@ Status GetNode(SqList *L, int i) {
 
 	printf("顺序表第 %d 位上的元素是：%d。\n", i, L->elem[i - 1]);
 	printf("\n");
+
+	return OK;
 }
 
 // 查找顺序表中是否存在某元素，如存在则打印位置
@@ -156,7 +104,7 @@ Status DestroySqList(SqList *L) {
 		free(L->elem);
 
 		L->elem = NULL;
-		L->length = L->listsize = NULL;
+		L->length = L->listsize = 0;
 
 		printf("线性表销毁成功！\n");
 	}
