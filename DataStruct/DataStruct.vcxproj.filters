@@ -18,5 +18,8 @@
     <ClCompile Include="SqList.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="LinkList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
