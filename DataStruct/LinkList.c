@@ -1,7 +1,7 @@
 #include"LinkList.h"
 
 // 单链表初始化(包含头结点)
-Status InitLinkList_H(LinkList Head) {
+LinkList InitLinkList_H() {
 	LinkList L = (LNode *)malloc(sizeof(LNode));
 	if (!L) {
 		printf("单链表初始化失败！\n");
@@ -9,27 +9,21 @@ Status InitLinkList_H(LinkList Head) {
 	}
 	
 	L->next = NULL;
-	Head->next = L;
 
 	printf("单链表初始化(包含头结点)初始化成功！\n");
-	return OK;
+	return L;
 }
 
 // 单链表初始化(无头结点)
-Status InitLinkList(LinkList Head){
-	Head->next = NULL;
+LinkList InitLinkList() {
+	LinkList L = NULL;
 
 	printf("单链表初始化(无头结点)初始化成功！\n");
-	return OK;
+	return L;
 }
 
 // 尾插法
 Status InsertList_Back(LinkList L, ElemType e) {
-	if (!L) {
-		printf("单链表未初始化！\n");
-		exit(OVERFLOW);
-	}
-
 	LinkList p = L;
 	while (p->next)
 		p = p->next;
@@ -45,18 +39,13 @@ Status InsertList_Back(LinkList L, ElemType e) {
 
 // 头插法
 Status InsertList_Pre(LinkList L, ElemType e) {
-	if (!L) {
-		printf("单链表未初始化！\n");
-		exit(OVERFLOW);
-	}
-
 	LinkList q = (LNode *)malloc(sizeof(LNode));
 	if (!q) {
 		printf("节点空间申请失败！\n");
 		exit(OVERFLOW);
 	}
 
-	LinkList head = L->next;
+	LinkList head = L;
 	q->next = head->next;
 	head->next = q;
 
@@ -87,7 +76,7 @@ int LinkListLength(LinkList L) {
 
 // 在第i位置上插入元素
 Status InsertLinkList(LinkList L, int i, ElemType e) {
-	LinkList p = L->next;
+	LinkList p = L;
 	
 	int idx = 1;
 	while(idx < i) {
@@ -106,7 +95,7 @@ Status InsertLinkList(LinkList L, int i, ElemType e) {
 
 // 删除第i位置上的元素
 ElemType DeleteLinkList(LinkList L, int i) {
-	LinkList p = L->next;
+	LinkList p = L;
 
 	int idx = 1;
 	while (idx < i) {

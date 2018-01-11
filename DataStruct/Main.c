@@ -29,17 +29,16 @@ int main() {
 	return OK;*/
 
 	// µ•¡¥±Ì≤‚ ‘
-	/*LNode L;
-	InitLinkList_H(&L);
+	LinkList L = InitLinkList_H();
 
-	InsertList_Back(&L, 5);
-	InsertList_Back(&L, 54);
+	InsertList_Back(L, 5);
+	InsertList_Back(L, 54);
 
-	InsertList_Pre(&L, 46);
+	InsertList_Pre(L, 46);
 
-	LinkListLength(&L);
+	LinkListLength(L);
 
-	InsertLinkList(&L, 2, 39);
+	InsertLinkList(L, 2, 39);
 
-	DeleteLinkList(&L, 3);*/
+	DeleteLinkList(L, 3);
 }

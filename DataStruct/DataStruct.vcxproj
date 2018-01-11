@@ -120,10 +120,12 @@
   <ItemGroup>
     <ClCompile Include="LinkList.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="SLinkList.c" />
     <ClCompile Include="SqList.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkList.h" />
+    <ClInclude Include="SLinkList.h" />
     <ClInclude Include="SqList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

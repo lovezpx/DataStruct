@@ -15,7 +15,8 @@ typedef struct LNode {
 	struct LNode *next;
 } LNode, *LinkList;
 
-Status InitLinkList_H(LinkList L);
+LinkList InitLinkList_H();
+LinkList InitLinkList();
 Status InsertList_Back(LinkList L, ElemType e);
 int LinkListLength(LinkList L);
 Status InsertList_Pre(LinkList L, ElemType e);

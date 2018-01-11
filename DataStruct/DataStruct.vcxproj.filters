@@ -24,12 +24,18 @@
     <ClCompile Include="Main.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="SLinkList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SqList.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="LinkList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="SLinkList.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
