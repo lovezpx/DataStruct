@@ -29,7 +29,7 @@ int main() {
 	return OK;*/
 
 	// µ•¡¥±Ì≤‚ ‘
-	LinkList L = InitLinkList_H();
+	/*LinkList L = InitLinkList_H();
 
 	InsertList_Back(L, 5);
 	InsertList_Back(L, 54);
@@ -40,5 +40,5 @@ int main() {
 
 	InsertLinkList(L, 2, 39);
 
-	DeleteLinkList(L, 3);
+	DeleteLinkList(L, 3);*/
 }
