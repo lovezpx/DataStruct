@@ -12,8 +12,9 @@ typedef int Status;
 
 typedef struct LNode {
 	ElemType data;
-	struct Lnode *next;
+	struct LNode *next;
 } LNode, *LinkList;
 
-Status InitLinkList(LNode *L);
+Status InitLinkList_H(LinkList L);
+Status InsertList_Back(LinkList L, ElemType e);
 int LinkListLength(LNode *L);

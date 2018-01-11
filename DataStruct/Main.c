@@ -2,9 +2,8 @@
 #include"LinkList.h"
 
 int main() {
-	/*
 	// 线性表测试
-	SqList L;
+	/*SqList L;
 	InitSqList(&L);
 	ErgodicSqList(&L);
 	printf("顺序表的长度为：%d。\n", SqListLength(&L));
@@ -27,12 +26,14 @@ int main() {
 	ErgodicSqList(&L);
 	printf("顺序表的长度为：%d。\n", SqListLength(&L));
 
-	return OK;
-	*/
+	return OK;*/
 
 	// 单链表测试
 	LNode L;
-	InitLinkList(&L);
-	
-	printf("单链表的长度为：%d。\n", LinkListLength(&L));
+	InitLinkList_H(&L);
+
+	InsertList_Back(&L, 5);
+	InsertList_Back(&L, 54);
+
+	LinkListLength(&L);
 }
