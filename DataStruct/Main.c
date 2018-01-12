@@ -1,5 +1,6 @@
 #include"SqList.h"
 #include"LinkList.h"
+#include"SLinkList.h"
 
 int main() {
 	// 线性表测试
@@ -41,4 +42,22 @@ int main() {
 	InsertLinkList(L, 2, 39);
 
 	DeleteLinkList(L, 3);*/
+
+	// 静态链表测试
+	SLinkList space;
+	InitSLinkList(space);
+
+	printf("静态链表的长度：%d。\n", SLinkListLength(space));
+
+	InsertSLinkList(space, 1, rand() % 100 + 1);
+
+	printf("静态链表的长度：%d。\n", SLinkListLength(space));
+
+	InsertSLinkList(space, 2, rand() % 100 + 1);
+
+	printf("静态链表的长度：%d。\n", SLinkListLength(space));
+
+	DeleteSLinkList(space, 2);
+
+	ErgodicSLinkList(space);
 }
