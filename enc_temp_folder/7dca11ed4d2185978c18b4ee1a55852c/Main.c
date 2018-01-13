@@ -66,6 +66,5 @@ int main() {
 	DuLinkList *L = InitDuLinkList();
 
 	InsertDuList_Pre(L, 5);
-
 	InsertDuList_Back(L, 8);
 }

@@ -118,12 +118,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DuLNode.c" />
     <ClCompile Include="LinkList.c" />
     <ClCompile Include="Main.c" />
     <ClCompile Include="SLinkList.c" />
     <ClCompile Include="SqList.c" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DuLNode.h" />
     <ClInclude Include="LinkList.h" />
     <ClInclude Include="SLinkList.h" />
     <ClInclude Include="SqList.h" />
