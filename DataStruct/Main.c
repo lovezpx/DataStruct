@@ -2,6 +2,7 @@
 #include"LinkList.h"
 #include"SLinkList.h"
 #include"DuLNode.h"
+#include"SqStack.h"
 
 int main() {
 	// œﬂ–‘±Ì≤‚ ‘
@@ -63,9 +64,19 @@ int main() {
 	ErgodicSLinkList(space);*/
 
 	// À´¡¥±Ì≤‚ ‘
-	DuLinkList *L = InitDuLinkList();
+	/*DuLinkList *L = InitDuLinkList();
 
 	InsertDuList_Pre(L, 5);
 
-	InsertDuList_Back(L, 8);
+	InsertDuList_Back(L, 8);*/
+
+	// À≥–Ú’ª≤‚ ‘
+	SqStack L;
+	InitSqStack(&L);
+
+	Push(&L, rand() % 100 + 1);
+	Push(&L, rand() % 100 + 1);
+	Push(&L, rand() % 100 + 1);
+
+	GetTop(&L);
 }
