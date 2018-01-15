@@ -72,11 +72,11 @@ int main() {
 
 	// À≥–Ú’ª≤‚ ‘
 	SqStack L;
-	InitSqStack(&L);
+	/*InitSqStack(&L);
 
 	Push(&L, rand() % 100 + 1);
 	Push(&L, rand() % 100 + 1);
 	Push(&L, rand() % 100 + 1);
 
-	GetTop(&L);
+	GetTop(&L);*/
 }
