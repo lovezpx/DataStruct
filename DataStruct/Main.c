@@ -3,6 +3,7 @@
 #include"SLinkList.h"
 #include"DuLNode.h"
 #include"SqStack.h"
+#include"SString.h"
 
 int main() {
 	// œﬂ–‘±Ì≤‚ ‘

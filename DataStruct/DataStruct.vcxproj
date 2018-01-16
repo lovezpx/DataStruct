@@ -124,6 +124,7 @@
     <ClCompile Include="SLinkList.c" />
     <ClCompile Include="SqList.c" />
     <ClCompile Include="SqStack.c" />
+    <ClCompile Include="SString.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DuLNode.h" />
@@ -131,6 +132,7 @@
     <ClInclude Include="SLinkList.h" />
     <ClInclude Include="SqList.h" />
     <ClInclude Include="SqStack.h" />
+    <ClInclude Include="SString.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
