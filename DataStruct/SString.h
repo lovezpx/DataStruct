@@ -31,3 +31,5 @@ typedef struct {
 HString InitString();
 // Çó´®³¤
 int StrLength(HString s);
+// ÅÐ¶Ï¿Õ´®
+int isEmpty(HString s);

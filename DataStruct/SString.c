@@ -1,5 +1,6 @@
 #include"SString.h"
 
+// ³õÊ¼»¯Ë³Ðò´®
 HString InitString() {
 	HString s;
 	s.length = 0;
@@ -10,8 +11,21 @@ HString InitString() {
 	return s;
 }
 
+// Çó´®³¤
 int StrLength(HString s) {
 	int length = s.length;
 	printf("×Ö·û´®µÄ³¤¶ÈÊÇ£º%d¡£\n", length);
 	return length;
+}
+
+// ÅÐ¶Ï¿Õ´®
+int isEmpty(HString s) {
+	if (s.length == 0) {
+		printf("×Ö·û´®Îª¿Õ¡£\n");
+		return 1;
+	}
+	else {
+		printf("×Ö·û´®²»Îª¿Õ¡£\n");
+		return 0;
+	}
 }
