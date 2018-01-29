@@ -6,6 +6,10 @@
 #include"SString.h"
 
 int main() {
+	// À≥–Ú¥Æ≤‚ ‘
+	HString s = InitString();
+	StrLength(s);
+
 	// œﬂ–‘±Ì≤‚ ‘
 	/*SqList L;
 	InitSqList(&L);
@@ -72,8 +76,8 @@ int main() {
 	InsertDuList_Back(L, 8);*/
 
 	// À≥–Ú’ª≤‚ ‘
-	SqStack L;
-	/*InitSqStack(&L);
+	/*SqStack L;
+	InitSqStack(&L);
 
 	Push(&L, rand() % 100 + 1);
 	Push(&L, rand() % 100 + 1);
