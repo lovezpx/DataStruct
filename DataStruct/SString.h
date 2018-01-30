@@ -33,3 +33,5 @@ HString InitString();
 int StrLength(HString s);
 // ÅÐ¶Ï¿Õ´®
 int isEmpty(HString s);
+// ´®´òÓ¡
+void StrPrint(HString s);

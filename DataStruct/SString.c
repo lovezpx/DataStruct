@@ -29,3 +29,13 @@ int isEmpty(HString s) {
 		return 0;
 	}
 }
+
+// ´®´òÓ¡
+void StrPrint(HString s) {
+	int i = s.length;
+	if (i == 0)
+		printf("´®Îª¿Õ\n");
+	for (i = 0; i < s.length; i++){
+		printf("%c", *(s.ch + i));
+	}
+}

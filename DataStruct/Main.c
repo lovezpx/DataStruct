@@ -10,6 +10,7 @@ int main() {
 	HString s = InitString();
 	StrLength(s);
 	isEmpty(s);
+	StrPrint(s);
 
 	// œﬂ–‘±Ì≤‚ ‘
 	/*SqList L;
