@@ -45,3 +45,5 @@ void Concat(HString *s, HString s1, HString s2);
 void SubString(HString *sn, HString s, int idx, int len);
 // ≤Â»Î¥Æ
 void insertStr(HString *sn, int idx, HString s);
+// ¥ÆµƒBrute-ForceÀ„∑®
+void BFIndex(HString S, HString T, int pos);

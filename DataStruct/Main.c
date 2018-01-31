@@ -29,7 +29,18 @@ int main() {
 	StrPrint(s);
 
 	deleteStr(&s, 2, 5);
-	StrPrint(s);*/
+	StrPrint(s);
+
+	// Brute-Force算法
+	HString S = InitString();
+	StrAssign(&S, "lovpxhflovezpxw");
+	StrPrint(S);
+
+	HString T = InitString();
+	StrAssign(&T, "lovezpx");
+	StrPrint(T);
+
+	BFIndex(S,T,1);*/
 
 	// 线性表测试
 	/*SqList L;

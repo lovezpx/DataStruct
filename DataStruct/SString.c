@@ -162,3 +162,28 @@ void deleteStr(HString *s, int idx, int len) {
 
 	printf("×Ö·û´®É¾³ý³É¹¦£¡\n");
 }
+
+// ´®µÄBrute-ForceËã·¨
+void BFIndex(HString S, HString T, int pos) {
+	if (pos < 0 || pos > S.length - T.length + 1) {
+		exit(OVERFLOW);
+	}
+
+	int i = pos - 1, j = 0;
+	while (i < S.length && j < T.length) {
+		if (S.ch[i] == T.ch[j]) {
+			++i;
+			++j;
+		} else {
+			i = i - j + 1;
+			j = 0;
+		}
+	}
+
+	if (j == T.length) {
+		printf("×Ö·û´®Æ¥Åä³É¹¦£¡Î»ÖÃÊÇ£º%d¡£\n", i - T.length + 1);
+		return i - T.length + 1;
+	}
+
+	printf("×Ö·û´®Æ¥ÅäÊ§°Ü£¡\n");
+}
