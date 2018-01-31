@@ -7,10 +7,29 @@
 
 int main() {
 	// À≥–Ú¥Æ≤‚ ‘
-	HString s = InitString();
+	/*HString s = InitString();
+	StrAssign(&s,"lovezpx");
 	StrLength(s);
 	isEmpty(s);
 	StrPrint(s);
+
+	HString sc = InitString();
+	StrCopy(&sc, s);
+	StrPrint(sc);
+
+	HString sn = InitString();
+	Concat(&sn, s, sc);
+	StrPrint(sn);
+
+	HString sz = InitString();
+	SubString(&sz, sn, 2, 5);
+	StrPrint(sz);
+
+	insertStr(&s, 3, sz);
+	StrPrint(s);
+
+	deleteStr(&s, 2, 5);
+	StrPrint(s);*/
 
 	// œﬂ–‘±Ì≤‚ ‘
 	/*SqList L;

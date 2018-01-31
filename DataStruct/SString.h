@@ -35,3 +35,13 @@ int StrLength(HString s);
 int isEmpty(HString s);
 // 串打印
 void StrPrint(HString s);
+// 串赋值
+void StrAssign(HString *s, char ch[]);
+// 串拷贝
+void StrCopy(HString *s1, HString s2);
+// 串连接
+void Concat(HString *s, HString s1, HString s2);
+// 取子串
+void SubString(HString *sn, HString s, int idx, int len);
+// 插入串
+void insertStr(HString *sn, int idx, HString s);
