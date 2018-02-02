@@ -198,8 +198,7 @@ void GetNext(HString T, int next[]) {
 			j++;
 			k++;
 			next[j] = k;
-		}
-		else {
+		} else {
 			k = next[k];
 		}
 	}
@@ -214,8 +213,7 @@ int KMPIndex(HString S, HString T) {
 		if (j == -1 || S.ch[i] == T.ch[j]) {
 			i++;
 			j++;
-		}
-		else {
+		} else {
 			j = next[j];
 		}
 	}
@@ -223,8 +221,7 @@ int KMPIndex(HString S, HString T) {
 	if (j >= T.length) {
 		printf("模式串在目标串的位置是：%d。\n", i - T.length + 1);
 		return i - T.length + 1;
-	}
-	else {
+	} else {
 		printf("模式串不包含目标串！\n");
 		return -1;
 	}
@@ -242,12 +239,10 @@ void GetNextVal(HString T, int nextval[]) {
 
 			if (T.ch[j] != T.ch[k]) {
 				nextval[j] = k;
-			}
-			else {
+			} else {
 				nextval[j] = nextval[k];
 			}
-		}
-		else {
+		} else {
 			k = nextval[k];
 		}
 	}
@@ -262,8 +257,7 @@ int KMPIndex_New(HString S, HString T) {
 		if (j == -1 || S.ch[i] == T.ch[j]) {
 			i++;
 			j++;
-		}
-		else {
+		} else {
 			j = nextval[j];
 		}
 	}
@@ -271,8 +265,7 @@ int KMPIndex_New(HString S, HString T) {
 	if (j >= T.length) {
 		printf("模式串在目标串的位置是：%d。\n", i - T.length + 1);
 		return i - T.length + 1;
-	}
-	else {
+	} else {
 		printf("模式串不包含目标串！\n");
 		return -1;
 	}
