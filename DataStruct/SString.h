@@ -47,3 +47,5 @@ void SubString(HString *sn, HString s, int idx, int len);
 void insertStr(HString *sn, int idx, HString s);
 // 串的Brute-Force算法
 void BFIndex(HString S, HString T, int pos);
+// KMP算法--返回子串位置
+int KMPIndex(HString S, HString T);

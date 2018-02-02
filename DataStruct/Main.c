@@ -40,7 +40,20 @@ int main() {
 	StrAssign(&T, "lovezpx");
 	StrPrint(T);
 
-	BFIndex(S,T,1);*/
+	BFIndex(S,T,1);
+
+	// KMP算法
+	HString S = InitString();
+	StrAssign(&S, "abaabbaacabaabcacabcaac");
+	StrPrint(S);
+
+	HString T = InitString();
+	StrAssign(&T, "abaabcac");
+	StrPrint(T);
+
+	//KMPIndex(S, T);
+
+	KMPIndex_New(S, T);*/
 
 	// 线性表测试
 	/*SqList L;

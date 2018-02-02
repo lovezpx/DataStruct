@@ -187,3 +187,93 @@ void BFIndex(HString S, HString T, int pos) {
 
 	printf("字符串匹配失败！\n");
 }
+
+// 串的KMP算法
+// 求串的next数组
+void GetNext(HString T, int next[]) {
+	int j = 0, k = -1;
+	next[0] = -1;
+	while (j < T.length - 1) {
+		if (k == -1 || T.ch[j] == T.ch[k]) {
+			j++;
+			k++;
+			next[j] = k;
+		}
+		else {
+			k = next[k];
+		}
+	}
+}
+
+// KMP算法--返回子串位置
+int KMPIndex(HString S, HString T) {
+	int next[STRING_INIT_SIZE], i = 0, j = 0;
+	GetNext(T, next);
+
+	while (i < S.length && j < T.length) {
+		if (j == -1 || S.ch[i] == T.ch[j]) {
+			i++;
+			j++;
+		}
+		else {
+			j = next[j];
+		}
+	}
+
+	if (j >= T.length) {
+		printf("模式串在目标串的位置是：%d。\n", i - T.length + 1);
+		return i - T.length + 1;
+	}
+	else {
+		printf("模式串不包含目标串！\n");
+		return -1;
+	}
+}
+
+// 修正后的KMP算法
+// 求串的nextval数组
+void GetNextVal(HString T, int nextval[]) {
+	int j = 0, k = -1;
+	nextval[0] = -1;
+	while (j < T.length) {
+		if (k == -1 || T.ch[j] == T.ch[k]) {
+			j++;
+			k++;
+
+			if (T.ch[j] != T.ch[k]) {
+				nextval[j] = k;
+			}
+			else {
+				nextval[j] = nextval[k];
+			}
+		}
+		else {
+			k = nextval[k];
+		}
+	}
+}
+
+// 修正后的KMP算法
+int KMPIndex_New(HString S, HString T) {
+	int nextval[STRING_INIT_SIZE], i = 0, j = 0;
+	GetNextVal(T, nextval);
+
+	while (i < S.length && j < T.length) {
+		if (j == -1 || S.ch[i] == T.ch[j]) {
+			i++;
+			j++;
+		}
+		else {
+			j = nextval[j];
+		}
+	}
+
+	if (j >= T.length) {
+		printf("模式串在目标串的位置是：%d。\n", i - T.length + 1);
+		return i - T.length + 1;
+	}
+	else {
+		printf("模式串不包含目标串！\n");
+		return -1;
+	}
+}
