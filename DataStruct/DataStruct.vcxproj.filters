@@ -36,6 +36,9 @@
     <ClCompile Include="SString.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="STriple.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SqList.h">
@@ -54,6 +57,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SString.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="STriple.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

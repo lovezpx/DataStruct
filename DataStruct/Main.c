@@ -4,6 +4,7 @@
 #include"DuLNode.h"
 #include"SqStack.h"
 #include"SString.h"
+#include"STriple.h"
 
 int main() {
 	// À≥–Ú¥Æ≤‚ ‘
