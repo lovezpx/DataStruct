@@ -124,6 +124,7 @@
     <ClCompile Include="DuLNode.c" />
     <ClCompile Include="LinkList.c" />
     <ClCompile Include="Main.c" />
+    <ClCompile Include="SArray.c" />
     <ClCompile Include="SLinkList.c" />
     <ClCompile Include="SqList.c" />
     <ClCompile Include="SqStack.c" />
@@ -133,11 +134,15 @@
   <ItemGroup>
     <ClInclude Include="DuLNode.h" />
     <ClInclude Include="LinkList.h" />
+    <ClInclude Include="SArray.h" />
     <ClInclude Include="SLinkList.h" />
     <ClInclude Include="SqList.h" />
     <ClInclude Include="SqStack.h" />
     <ClInclude Include="SString.h" />
     <ClInclude Include="STriple.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
