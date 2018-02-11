@@ -2,33 +2,21 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<malloc.h>
+#include<math.h>
 
 #define OK 1
 #define ERROR 0
-#define OVERFLOW 0
 
-#define TRIPLE_INIT_SIZE 100
+#define MAXSIZE 100
 
 typedef int ElemType;
 
 typedef struct triple {
 	int i, j;
-	ElemType Elem;
+	ElemType e;
 } triple;
 
 typedef struct TSMatrix {
-	triple Elem[TRIPLE_INIT_SIZE];
-	int EPos[TRIPLE_INIT_SIZE];
-	int n, m, num;
+	triple Elem[MAXSIZE + 1];
+	int mu, nu, tu;
 } TSMatrix;
-
-typedef struct OLNode {
-	int i, j;
-	int data;
-	struct OLNode * right, *down;
-} OLNode;
-
-typedef struct {
-	OLNode * rhead, *chead;
-	int n, m, num;
-}CrossList;
