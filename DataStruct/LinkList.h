@@ -20,5 +20,6 @@ LinkList InitLinkList();
 Status InsertList_Back(LinkList L, ElemType e);
 int LinkListLength(LinkList L);
 Status InsertList_Pre(LinkList L, ElemType e);
-Status InsertLinkList(LinkList L, int i, ElemType e);
+Status PutLinkList(LinkList L, int i, ElemType e);
 ElemType DeleteLinkList(LinkList L, int i);
+void ListPrint(LinkList L);

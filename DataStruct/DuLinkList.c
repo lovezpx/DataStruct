@@ -1,4 +1,4 @@
-#include"DuLNode.h"
+#include"DuLinkList.h"
 
 // ³õÊ¼»¯Ë«Á´±í
 DuLinkList *InitDuLinkList() {

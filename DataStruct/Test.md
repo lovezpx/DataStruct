@@ -1,4 +1,4 @@
-// À≥–Ú¥Æ≤‚ ‘
+// È°∫Â∫è‰∏≤ÊµãËØï
 HString s = InitString();
 StrAssign(&s,"lovezpx");
 StrLength(s);
@@ -23,7 +23,7 @@ StrPrint(s);
 deleteStr(&s, 2, 5);
 StrPrint(s);
 
-// Brute-ForceÀ„∑®
+// Brute-ForceÁÆóÊ≥ï
 HString S = InitString();
 StrAssign(&S, "lovpxhflovezpxw");
 StrPrint(S);
@@ -34,7 +34,7 @@ StrPrint(T);
 
 BFIndex(S,T,1);
 
-// KMPÀ„∑®
+// KMPÁÆóÊ≥ï
 HString S = InitString();
 StrAssign(&S, "abaabbaacabaabcacabcaac");
 StrPrint(S);
@@ -47,72 +47,32 @@ StrPrint(T);
 
 KMPIndex_New(S, T);
 
-// œﬂ–‘±Ì≤‚ ‘
-SqList L;
-InitSqList(&L);
-ErgodicSqList(&L);
-printf("À≥–Ú±Ìµƒ≥§∂»Œ™£∫%d°£\n", SqListLength(&L));
-
-for (int i = 1; i <= 10; i++) {
-	InsertSqList(&L, i, rand() % 100 + 1);
-}
-ErgodicSqList(&L);
-printf("À≥–Ú±Ìµƒ≥§∂»Œ™£∫%d°£\n", SqListLength(&L));
-
-DeleteSqList(&L, 4);
-ErgodicSqList(&L);
-printf("À≥–Ú±Ìµƒ≥§∂»Œ™£∫%d°£\n", SqListLength(&L));
-
-GetNode(&L, 4);
-
-LocateSqList(&L, 4);
-
-DestroySqList(&L);
-ErgodicSqList(&L);
-printf("À≥–Ú±Ìµƒ≥§∂»Œ™£∫%d°£\n", SqListLength(&L));
-
-return OK;
-
-// µ•¡¥±Ì≤‚ ‘
-LinkList L = InitLinkList_H();
-
-InsertList_Back(L, 5);
-InsertList_Back(L, 54);
-
-InsertList_Pre(L, 46);
-
-LinkListLength(L);
-
-InsertLinkList(L, 2, 39);
-
-DeleteLinkList(L, 3);
-
-// æ≤Ã¨¡¥±Ì≤‚ ‘
+// ÈùôÊÄÅÈìæË°®ÊµãËØï
 SLinkList space;
 InitSLinkList(space);
 
-printf("æ≤Ã¨¡¥±Ìµƒ≥§∂»£∫%d°£\n", SLinkListLength(space));
+printf("ÈùôÊÄÅÈìæË°®ÁöÑÈïøÂ∫¶Ôºö%d„ÄÇ\n", SLinkListLength(space));
 
 InsertSLinkList(space, 1, rand() % 100 + 1);
 
-printf("æ≤Ã¨¡¥±Ìµƒ≥§∂»£∫%d°£\n", SLinkListLength(space));
+printf("ÈùôÊÄÅÈìæË°®ÁöÑÈïøÂ∫¶Ôºö%d„ÄÇ\n", SLinkListLength(space));
 
 InsertSLinkList(space, 2, rand() % 100 + 1);
 
-printf("æ≤Ã¨¡¥±Ìµƒ≥§∂»£∫%d°£\n", SLinkListLength(space));
+printf("ÈùôÊÄÅÈìæË°®ÁöÑÈïøÂ∫¶Ôºö%d„ÄÇ\n", SLinkListLength(space));
 
 DeleteSLinkList(space, 2);
 
 ErgodicSLinkList(space);
 
-// À´¡¥±Ì≤‚ ‘
+// ÂèåÈìæË°®ÊµãËØï
 DuLinkList *L = InitDuLinkList();
 
 InsertDuList_Pre(L, 5);
 
 InsertDuList_Back(L, 8);
 
-// À≥–Ú’ª≤‚ ‘
+// È°∫Â∫èÊ†àÊµãËØï
 SqStack L;
 InitSqStack(&L);
 
@@ -122,13 +82,13 @@ Push(&L, rand() % 100 + 1);
 
 GetTop(&L);
 
-// À≥–Ú ˝◊È≤‚ ‘
+// È°∫Â∫èÊï∞ÁªÑÊµãËØï
 SArray *A = (SArray *)malloc(sizeof(SArray));
 InitArray(A, 2, 5, 6);
 
 Assign(A, 3, 2, 4);
 
 ElemType e;
-printf("◊¯±Í[%d,%d]µƒ÷µ «£∫%d", 2, 4, Value(A, &e, 2, 4));
+printf("ÂùêÊ†á[%d,%d]ÁöÑÂÄºÊòØÔºö%d", 2, 4, Value(A, &e, 2, 4));
 
 DestroyArray(A);

@@ -75,7 +75,7 @@ int LinkListLength(LinkList L) {
 }
 
 // 在第i位置上插入元素
-Status InsertLinkList(LinkList L, int i, ElemType e) {
+Status PutLinkList(LinkList L, int i, ElemType e) {
 	LinkList p = L;
 	
 	int idx = 1;
@@ -110,4 +110,19 @@ ElemType DeleteLinkList(LinkList L, int i) {
 	free(q);
 
 	return elem;
+}
+
+void ListPrint(LinkList L) {
+	if (!L) {
+		printf("单链表初始化失败！\n");
+		exit(OVERFLOW);
+	}
+
+	LinkList p = L->next;
+	while (p->next) {
+		printf("%d\n", p->data);
+		p = p->next;
+	}
+
+	return;
 }

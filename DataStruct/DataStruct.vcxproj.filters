@@ -27,9 +27,6 @@
     <ClCompile Include="SLinkList.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="DuLNode.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="SqStack.c">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -42,6 +39,9 @@
     <ClCompile Include="SArray.c">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="DuLinkList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="SqList.h">
@@ -51,9 +51,6 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SLinkList.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="DuLNode.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="SqStack.h">
@@ -68,10 +65,18 @@
     <ClInclude Include="SArray.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="DuLinkList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="Text.txt">
+    <Text Include="Test.md">
       <Filter>资源文件</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="note.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
